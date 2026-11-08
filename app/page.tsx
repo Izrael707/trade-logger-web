@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useAuth } from "@/context/AuthContext";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -6,10 +6,10 @@ import { useEffect } from "react";
 
 export default function Home() {
   const { user, loading } = useAuth();
-    const router = useRouter();
-    useEffect(() => {
-      if (!loading && user) router.replace("/dashboard");
-    }, [loading, user, router]);
+  const router = useRouter();
+  useEffect(() => {
+    if (!loading && user) router.replace("/dashboard");
+  }, [loading, user, router]);
   return (
     <div className="relative flex min-h-svh flex-col bg-zinc-50 text-zinc-900 dark:bg-black dark:text-zinc-50">
       {/* Grid background */}
@@ -74,7 +74,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="relative z-10 px-6 py-6 text-center text-xs text-zinc-500 sm:px-10">
-        © {new Date().getFullYear()} Trade Logger. All rights reserved.
+        © 2026 Trade Logger. All rights reserved.
       </footer>
     </div>
   );
