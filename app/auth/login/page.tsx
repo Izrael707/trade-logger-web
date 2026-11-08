@@ -25,7 +25,7 @@ const Login = () => {
       router.replace("/dashboard");
     } catch (error: any) {
       closeAlert();
-      toast(error.message, "error", 4000);
+      toast("Invalid email or password.", "error", 4000);
     } finally {
       setSubmitting(false);
       setEmail("");

@@ -29,7 +29,7 @@ const SignUp = () => {
       router.replace("/dashboard");
     } catch (error: any) {
       closeAlert();
-      toast(error.message, "error", 4000);
+      toast("An error occurred, Try again later.", "error", 4000);
     } finally {
       setSubmitting(false);
       setEmail("");
